@@ -10,5 +10,5 @@ RUN pip install picamera
 ADD . /app
 
 # tell python to execute demo.py
-CMD modprobe bcm2835-v4l2 && python /app/demo.py
+CMD modprobe bcm2835-v4l2 && python /app/timelapse.py
 
