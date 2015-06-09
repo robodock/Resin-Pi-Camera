@@ -13,5 +13,5 @@ RUN cp /usr/share/zoneinfo/Asia/Taipei /etc/localtime
 COPY . /app
 
 # tell python to execute demo.py
-CMD modprobe bcm2835-v4l2 && python /app/timelapse.py
+CMD modprobe bcm2835-v4l2 && python /app/timelapse2.py
 
