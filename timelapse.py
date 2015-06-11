@@ -33,7 +33,7 @@ while true :
 	while diskusage(picturedir) >= max :
 		shutil.rmtree(find_oldest_dir(pictureDir))
 
-	currentHour=datetime.datetime.now().strftime("%Y%m%d_%H)
+	currentHour=datetime.datetime.now().strftime("%Y%m%d_%H")
 	if not os.path.exists(currentHour) :
 		os.makedirs(currentHour)
 		
