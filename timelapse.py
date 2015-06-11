@@ -10,14 +10,14 @@ pictureDir="capture"
 
 os.chdir(dataDir)
 
-def find_oldest_dir(path)
+def find_oldest_dir(path) :
 	cur_path=os.getcwd()
 	os.chdir(path)
 	oldestDir = min(os.listdir(path), key=os.path.getctime)
 	os.chdir(cur_path)
 	return oldestDir
 
-def diskusage(path)
+def diskusage(path) :
 	df = subprocess.Popen(["du", path], stdout=subprocess.PIPE)
 	return df.communicate()[0]
 

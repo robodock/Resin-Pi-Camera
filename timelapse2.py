@@ -4,7 +4,7 @@ import os
 import time
 import picamera
 
-time_interval = os.environ["INTERVAL"]
+time_interval = os.environ["TIME_INTERVAL"]
 
 with picamera.PiCamera() as camera:
 #    camera.start_preview()
