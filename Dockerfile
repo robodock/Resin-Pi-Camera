@@ -2,7 +2,7 @@ FROM resin/rpi-raspbian:jessie
 
 # Install Python, pip and the camera module firmware
 RUN apt-get update
-RUN apt-get install -y python python-dev libraspberrypi-bin python-pip
+RUN apt-get install -y python python-dev libraspberrypi-bin python-pip dropbear
 
 # Install picamera python module using pip
 RUN pip install picamera
@@ -13,5 +13,5 @@ RUN cp /usr/share/zoneinfo/Asia/Taipei /etc/localtime
 COPY . /app
 
 # tell python to execute demo.py
-CMD modprobe bcm2835-v4l2 && python /app/timelapse2.py
-
+# CMD modprobe bcm2835-v4l2 && python /app/timelapse2.py
+CMD ["bash", "/app/start.sh"]
