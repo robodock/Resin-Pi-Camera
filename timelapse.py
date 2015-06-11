@@ -30,7 +30,7 @@ max=5000000
 
 while True :
 # check disk space used already
-	while diskusage(picturedir) >= max :
+	while diskusage(pictureDir) >= max :
 		shutil.rmtree(find_oldest_dir(pictureDir))
 
 	currentHour=datetime.datetime.now().strftime("%Y%m%d_%H")
