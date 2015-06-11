@@ -28,7 +28,7 @@ if not os.path.exists(pictureDir) :
 # set disk splace limit to 5GB
 max=5000000
 
-while true :
+while True :
 # check disk space used already
 	while diskusage(picturedir) >= max :
 		shutil.rmtree(find_oldest_dir(pictureDir))
