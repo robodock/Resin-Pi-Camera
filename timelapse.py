@@ -3,7 +3,7 @@
 import os, subprocess, datetime, shutil
 import picamera
 
-time_interval = os.environ["INTERVAL"]
+#time_interval = os.environ["INTERVAL"]
 
 dataDir="/data"
 pictureDir="capture"
