@@ -6,7 +6,7 @@ import picamera
 #time_interval = os.environ["INTERVAL"]
 
 dataDir="/data"
-pictureDir=dataDir + "\/capture")
+pictureDir=(dataDir + "/capture")
 
 os.chdir(dataDir)
 
