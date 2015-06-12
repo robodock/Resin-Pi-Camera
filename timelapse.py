@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import os, datetime, shutil
+import os, time, datetime, shutil
 import picamera
 
 #time_interval = os.environ["INTERVAL"]
