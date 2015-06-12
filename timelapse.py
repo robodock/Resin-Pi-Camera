@@ -3,12 +3,10 @@
 import os, time, datetime, shutil
 import picamera
 
-#time_interval = os.environ["INTERVAL"]
 
 dataDir="/data"
 pictureDir=dataDir + "/capture"
 
-os.chdir(dataDir)
 
 def find_oldest_dir(path) :
 	cur_path=os.getcwd()
@@ -24,11 +22,13 @@ def diskusage(path) :
 	#used = (st.f_blocks - st.f_bfree) * st.f_frsize
 	return free 
 
+
+os.chdir(dataDir)
 	
 if not os.path.exists(pictureDir) :
 	os.makedirs(pictureDir)
 
-# set disk splace limit to 500MB
+# set disk free splace limit to 500MB
 min=500000
 
 while True :
