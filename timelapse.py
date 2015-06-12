@@ -6,7 +6,7 @@ import picamera
 #time_interval = os.environ["INTERVAL"]
 
 dataDir="/data"
-pictureDir=(dataDir + "/capture")
+pictureDir=dataDir + "/capture"
 
 os.chdir(dataDir)
 
@@ -43,9 +43,9 @@ while True :
 	with picamera.PiCamera() as camera:
 		camera.resolution=(os.environ["IMAGE_WIDTH"], os.environ["IMAGE_HEIGH"])
 		camera.rotation=(270)
-	#camera.start_preview()
-	#time.sleep(2)
-		camera.capture(os.path.join(dataDir,pictureDir,currentHour)+'\/'+datetime.datetime.now().strftime("%Y%M%d-%H%M%S")+'.jpg')
+		#camera.start_preview()
+		#time.sleep(2)
+		camera.capture(os.path.join(pictureDir,currentHour)+'/'+datetime.datetime.now().strftime("%Y%M%d-%H%M%S")+'.png')
 	
 	#	for filename in camera.capture_continuous('/data/img-{timestamp:%Y%m%d-%H%M%S}.png'):
 	#	print('Captured %s' % filename)
