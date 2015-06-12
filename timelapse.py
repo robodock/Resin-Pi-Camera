@@ -41,7 +41,7 @@ while True :
 		os.makedirs(os.path.join(pictureDir, currentHour))
 		
 	with picamera.PiCamera() as camera:
-		camera.resolution=(os.environ["IMAGE_WIDTH"], os.environ["IMAGE_HEIGH"])
+		camera.resolution=(int(os.environ["IMAGE_WIDTH"]), int(os.environ["IMAGE_HEIGH"]))
 		camera.rotation=(270)
 		#camera.start_preview()
 		#time.sleep(2)
