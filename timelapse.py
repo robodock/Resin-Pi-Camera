@@ -50,6 +50,6 @@ while True :
 		
 	with picamera.PiCamera() as camera:
 		camera.resolution=(int(os.environ["IMAGE_WIDTH"]), int(os.environ["IMAGE_HEIGH"]))
-		camera.rotation=(270)
+		camera.rotation=(270) #my camera angle
 		camera.capture(os.path.join(pictureDir,currentHour)+'/'+datetime.datetime.now().strftime("%Y%m%d-%H%M%S")+'.png')
 		time.sleep(float(os.environ["TIME_INTERVAL"])) # wait time_interval seconds
