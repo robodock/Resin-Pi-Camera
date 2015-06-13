@@ -11,5 +11,5 @@ RUN cp /usr/share/zoneinfo/Asia/Taipei /etc/localtime
 # add the root dir to the /app dir in the container env
 COPY . /app
 
-CMD modprobe bcm2835-v4l2 && /app/start.sh
+CMD modprobe bcm2835-v4l2 && bash /app/start.sh
 #CMD ["bash", "/app/start.sh"]
