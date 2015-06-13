@@ -29,7 +29,7 @@ if not os.path.exists(pictureDir) :
 	os.makedirs(pictureDir)
 
 # set disk free splace limit to 500MB
-min=500000
+min=500000000
 
 while True :
 # check disk space used already
